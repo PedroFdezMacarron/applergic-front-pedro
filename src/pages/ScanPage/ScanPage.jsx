@@ -21,7 +21,7 @@ export default function ScanPage(){
             
         </div>
       </div>
-      {/* <ScanCodePage></ScanCodePage> */}
+     
       
        
 
