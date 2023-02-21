@@ -1,0 +1,72 @@
+.editDiary{
+  display: flex;
+  justify-content: flex-end;
+  margin: 4vh 3vh 2vh 0vh;
+  align-items: center;
+
+  a{
+      margin: 2vh;
+  }
+
+  &-png{
+      background: #faebd700;
+      border: none;
+      width: 4vh;
+  }
+
+}
+
+.tittle{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-Bold{
+    font-family: "Monserrat-Bold";
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 2vh;
+  }
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #83d8ad;
+  padding: 2vh;
+  justify-content: space-evenly;
+
+  &__div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-container{
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border: 10px solid rgb(131, 216, 173);
+
+      &_dates{
+        padding: 3vh;
+      }
+
+      &_cross{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+      }
+    }
+
+    &-img{
+      position: relative;
+      width: 150px;
+      height: 150px;
+      object-fit: scale-down; 
+    }
+  }
+}

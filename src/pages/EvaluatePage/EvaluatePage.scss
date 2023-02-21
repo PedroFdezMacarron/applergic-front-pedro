@@ -28,11 +28,13 @@ a{
         margin-top: 25px;
         font-size: 19px;
         font-family: Monserrat-Estandart;
+        // font-weight: bold;
         &__ppal{
-            font-weight: bold;
+            // font-weight: 400;
         }
         &__texto{
             margin-top: 2vh;
+         
         }
     }
     &__c-stars-hijo{

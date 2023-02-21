@@ -12,11 +12,12 @@ const ProfileAlergicPage = () => {
 
   const [components, setComponentes] = useState([]);
   const [arrayLetras, setArrayLetras] = useState([]);
-  const [miClase, setMiClase] = useState('alergicPage__words__box--c--1');
+  const [miClase, setMiClase] = useState
+  ('alergicPage__words__box--c--1');
 
   const navigate = useNavigate();
 
-  let alergiasUser = [];
+  let alergiasUser = newUser.intolerances || [];
   let nameAlergias = [];
 
   // const claseSelected = 'selected';
@@ -63,17 +64,11 @@ const ProfileAlergicPage = () => {
   }
 
   const changeColor = (event) => {
-    let contador = 0;
-    console.log(contador);
-    if (contador === 0) {
-    event.target.className = 'selected';
-    contador += contador;
-    console.log(contador);
+    if (event.target.className === 'selected') {
+    event.target.className = 'alergicPage__words__box--c--1';
     }
     else {
-    event.target.className = 'alergicPage__words__box--c--1';
-    contador -= contador;
-    console.log(contador);
+      event.target.className = 'selected';
     }
   }
 

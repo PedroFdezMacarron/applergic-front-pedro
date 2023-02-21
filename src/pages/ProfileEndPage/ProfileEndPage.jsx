@@ -24,7 +24,7 @@ const ProfileEndPage = () => {
         <img src={perfect} alt='alergics-finish'></img>
         <h3>Hemos terminado, ya puedes escanear tu primer producto.</h3>
       </div>
-      <button><Link to='/scan'>Escanea un producto</Link></button>
+      <button ><Link to='/scan'>Escanea un producto</Link></button>
     </div>
   )
 }

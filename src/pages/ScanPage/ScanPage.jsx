@@ -3,6 +3,7 @@ import CrossComponet from '../../components/CrossComponet/CrossComponent'
 import cbarras from '../../../src/assets/codigobarras.png'
 import qr from '../../../src/assets/qr.png'
 import nfc from '../../../src/assets/nfc.png'
+import ScanCodePage from './ScanCodePage/ScanCodePage'
 import { Link } from 'react-router-dom';
 import "./ScanPage.scss"
 
@@ -16,11 +17,11 @@ export default function ScanPage(){
          <div className='info'>
             <p className='titleBold'>Escaneando...</p>
             <p className='titleNormal'>Tan solo tienes que centrar el<br></br>código de barras del producto <br></br> en el recuadro.</p> 
-            <input type="text" className='scan_input'></input>
+            {/* <input type="text" className='scan_input'></input> */}
             
         </div>
       </div>
-     
+
       
        
 

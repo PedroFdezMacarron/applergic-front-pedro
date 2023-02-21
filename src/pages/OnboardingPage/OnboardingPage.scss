@@ -12,9 +12,22 @@
     align-content: center;
     justify-content: center;
 }
+.container-flash{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
 .container-main{
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Monserrat-Estandart;
+    align-items: center;
     &__imglogo{
         bottom: 50px;
         max-width: 600px;
@@ -25,7 +38,7 @@
     &__nav-container{
         display: flex;
         justify-content: space-around;
-        width:100%;
+        max-width:600px;
         margin-top: 95px;
         bottom: 4vh;
         // position: fixed;
@@ -64,7 +77,6 @@
 .nav-container{
     display: flex;
     justify-content: space-around;
-    width:100%;
     margin-top: 10%;
     bottom: 4vh;
     position: fixed;
@@ -75,15 +87,6 @@
         border: none;
         background-color: white;
     }
-}
-.container-flash{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-
 }
 .applergicPpal{
     object-fit: cover;

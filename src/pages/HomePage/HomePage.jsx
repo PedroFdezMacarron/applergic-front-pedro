@@ -17,14 +17,14 @@ const HomePage = () => {
       <div className='home'>
         <div className='home-menu'>
         <PopupDemo></PopupDemo>
-            <Link to = {'/home/profile'}><img className="home-menu_buttonInfo" src={buttonInfo} alt="buttonInfo"/></Link>   
+            <Link to = {'/profile'}><img className="home-menu_buttonInfo" src={buttonInfo} alt="buttonInfo"/></Link>   
         </div>
         <div className='home-logo'>
             <img className="home-menu_logohome" src={logohome} alt="logohome" />   
         </div>
         <div className='home-buttons'>
             <div className='home-buttons_scan'>
-            {/* Botón de escanear */}
+            
             <Link to = {'/scan'}><button className="button-class1">
                 <div><img src ={scanimg} alt="buttonScan"/></div>
                 <div><p>Escanear</p></div>
@@ -33,8 +33,8 @@ const HomePage = () => {
               <p>Escanea un nuevo producto.</p>
             </div>
             <div className='home-buttons_scan'>
-            {/* Botón de Buscar producto */}
-             <Link to = {'/home'}><button className="button-class2">
+            
+             <Link to = {'/gallery'}><button className="button-class2">
                 <div><img src ={searchimg} alt="buttonSearch"/></div>
                 <div><p>Buscar</p></div>
                 <div><p className='ocult'>Buscar</p></div>
@@ -42,7 +42,7 @@ const HomePage = () => {
               <p>Busca un comercio o restaurante para ti.</p>
             </div>
             <div className='home-buttons_scan'>
-            {/* Botón de pedir ayuda */}
+            
             <Link to = {'/profile/emergency'}><button className="button-class3">
                 <div><img src ={sos} alt="buttonSearch"/></div>
                 <div><p>S.O.S</p></div>
@@ -51,7 +51,7 @@ const HomePage = () => {
               <p>¿Necesitas ayuda urgente? Contactamos con emergencias.</p>
             </div>
         </div>
-        {/* este es el menú estático */}
+        
         <StaticMenu></StaticMenu>
       </div>
 

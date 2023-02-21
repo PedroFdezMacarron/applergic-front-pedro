@@ -13,6 +13,7 @@ const EvaluatePage = () => {
         <VolverComponent  ruta={'/home'}></VolverComponent>
       </div>
         <div className="c-evaluate-padre">
+
           <div className="c-evaluate-padre__c-logo-hijo">
             <img className="c-evaluate-padre__c-logo-hijo__img-logo" src={LogoEvaluate} alt="img-logo"/>
           </div> 

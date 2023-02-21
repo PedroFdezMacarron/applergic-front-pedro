@@ -4,7 +4,7 @@ import { TieredMenu } from 'primereact/tieredmenu';
 // import { Link } from "react-router-dom"
 // import menuhamburguesa from "../../assets/HomeAssets/menuhamburguesa.png";
 import "./TiredMenu.scss"
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 
 
@@ -59,10 +59,13 @@ export default function PopupDemo() {
        
     ];
 
+    const navigate = (items) =>{
+        console.log(items);
+    }
     return (
         <div className="card flex justify-content-center">
             <TieredMenu model={items} popup ref={menu}/>
-            <Button className='buttom-menu' icon='pi pi-bars' onClick={(e) => menu.current.toggle(e)} />   
+            <Button className='buttom-menu' icon='pi pi-bars' onClick={(e) => {menu.current.toggle(e); navigate(e)}} />   
         </div>
     )
 }

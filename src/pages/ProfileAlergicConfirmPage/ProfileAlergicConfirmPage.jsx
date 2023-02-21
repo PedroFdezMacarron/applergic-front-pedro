@@ -8,20 +8,37 @@ import { JwtContext } from '../../shared/contexts/JwtContext';
 
 const ProfileAlergicConfirmPage = () => {
 
-  const { newUser } = useContext(JwtContext);
+  const { newUser, setJwt, setUser } = useContext(JwtContext);
 
   let alergiasUser = newUser.intolerances;
+  
   console.log(newUser);
   console.log(alergiasUser);
 
   const navigate = useNavigate();
 
   const guardar = () => {
+    console.log('guardar usuario');
     API.post('users/register', newUser).then(res => {
     console.log('Register user',);
-    navigate('/profile/end')
+    console.log("submit");
+    })
+      const formData = {
+
+        email: newUser.email,
+        password: newUser.password
+      }
+    API.post('users/login', formData).then(res => {
+        console.log(newUser);
+        console.log(formData);
+        localStorage.setItem('token', res.data.token)
+        localStorage.setItem('user', JSON.stringify(res.data.user))
+        setJwt(true);
+        setUser(JSON.stringify(res.data.user));
+        navigate('/profile/end')
     })
   }
+  
 
   return (
     <div className='alergicConfirm'>

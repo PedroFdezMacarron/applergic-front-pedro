@@ -16,17 +16,21 @@ const valoresPorDefecto={"_id": "63f34eabfb3892b2cfad604c",
 "name": "PRODUCTO NO ENCONTRADO",
 "brand": "NO ENCONTRADO",
 "EAN": "1111111111",
-"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/2048px-Imagen_no_disponible.svg.png",
+"img":"https://img.freepik.com/vector-gratis/senal-roja-prohibida_1284-42862.jpg?w=2000",
 "components": []};
 
 const ScanResultPage = () => {
   const { barCode } = useContext(JwtContext);
   const {newUser, setUser} = useContext(JwtContext);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [product, setProduct] = useState([]);
   const [productComponents, setProductComponents] = useState();  
-  let componentsTxt="";
-
+  const [result, setResult] = useState("ok");  
+  let componentsTxt="";  
+  let resultText='';
+  let resultClassName='';
+  let resultClassNameSign='';
+  let sign;
 
   // llama al get con el código de barras que recibe
    useEffect(() => {
@@ -36,12 +40,19 @@ const ScanResultPage = () => {
         console.log("get del producto:",barCode);
         API.get('products/'+barCode).then(res=>{
           setProduct(res.data);
-          console.log("res del producto:",res.data);        
-          setDatos(res.data);
+          if(res.data){
+            console.log("res del producto:",res.data);        
+            setDatos(res.data);
+          }else{
+            setProduct(valoresPorDefecto);    
+            console.log("valores por defecto:",valoresPorDefecto);
+            setResult('nd');     
+          }
         })
         
       } catch (error) {
-        setDatos({valoresPorDefecto});
+        setProduct(valoresPorDefecto);
+        setResult('nd');  
       }
     }
     getProduct();
@@ -57,11 +68,7 @@ const ScanResultPage = () => {
     setProductComponents(componentsTxt);
   }
 
-  let result='ok';
-  let resultText='';
-  let resultClassName='';
-  let resultClassNameSign='';
-  let sign;
+
   if (result==='ok'){
     resultText= "Este producto es apto para ti";
     resultClassName= 'result__body--center--ok';
@@ -81,30 +88,29 @@ const ScanResultPage = () => {
     sign = signNd;
   }
 
-  const formatDate = (myDate) =>{
-    const date = new Date(myDate);
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-    const formattedDate = date.toLocaleDateString('es-ES', options);
-
-    return formattedDate
-  } 
 
   // guardar el producto en el dirario del usuario.
   const saveDiaryProduct=()=>{
     let completUser = JSON.parse(localStorage.getItem('user'));  
-    // let completUser = JSON.parse(newUser);
-
     console.log('completuser',completUser);
-
     let arrayDiary = [...completUser.diaryProducts];
-    const date = new Date().getDate;
-    arrayDiary = [...arrayDiary,{_id: product._id, date:date, notes:"sin notas"}];
-    //esto de abajo guardaba sólo el alimento pero se cargaba el diario del Producto pero no guardar realmente los cambios
+
+    const fecha = new Date();
+  const fechaUTC = new Date(Date.UTC(
+  fecha.getUTCFullYear(),
+  fecha.getUTCMonth(),
+  fecha.getUTCDate(),
+  fecha.getUTCHours(),
+  fecha.getUTCMinutes(),
+  fecha.getUTCSeconds()
+));
+    
+    arrayDiary = [...arrayDiary,{_id: product._id, date:fechaUTC , notes:"sin notas"}];    
     completUser = {...completUser, diaryProducts:[...arrayDiary]};    
-    API.put('users/update', completUser).then(res => {
-      // console.log(res.data);
+    API.put('users/update', completUser).then(res => {    
       localStorage.setItem('user', JSON.stringify(res.data));
       setUser(JSON.stringify(res.data));
+      navigate('/diary');
     })
 
   }
@@ -132,18 +138,17 @@ const ScanResultPage = () => {
 
           <div className='result__body--rigth'>             
                 <Link to="/evaluate" className='result__body--link'  ><img className='result__body--ico' src ={start} alt="home"/></Link>
-                <img onClick={saveDiaryProduct} className='result__body--link'  src={diario} alt="save" />
-                {/* <Link to="/diary" className='result__body--link' ><img className='result__body--ico' src ={diario} alt="home"/></Link> */}
+                <img onClick={saveDiaryProduct} className='result__body--ico'  src={diario} alt="save" />                
                 <Link to="/home" className='result__body--link' ><img className='result__body--ico' src ={share} alt="home"/></Link>
           </div>
         </div>
 
 
         <div className='result__name'>
-            {product.name}
+            {product?.name}
         </div>
         <div className='result__brand'>
-            {product.brand}
+            {product?.brand}
         </div>
         <div className='result__components'>
             <span className='result__components--bold'>Ingredientes:</span>{productComponents}
