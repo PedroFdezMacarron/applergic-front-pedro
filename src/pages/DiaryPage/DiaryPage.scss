@@ -1,0 +1,132 @@
+.editDiary{
+    display: flex;
+    justify-content: flex-end;
+    margin: 4vh 3vh 2vh 0vh;
+    align-items: center;
+
+    a{
+        margin: 2vh;
+    }
+
+    &-png{
+        width: 4vh;
+    }
+}
+
+.tittle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-Bold{
+        font-family: "Monserrat-Bold";
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 2vh;
+    }
+
+    &-Bold2{
+        font-family: "Monserrat-Bold";
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 2vh;
+    }
+
+    &-info{
+       margin-bottom: 2vh; 
+       text-align: center;
+       margin-bottom: 4vh;
+    }
+}
+
+.products{
+    display: flex;
+    border: 1px solid #83d8ad;
+    padding: 2vh;
+    justify-content: space-evenly;
+
+    &-container{
+        display: flex;
+        align-items: center;
+
+        &_dates{
+            padding: 3vh;
+        }
+
+        &_cross{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &-img{
+        max-height: 8vh;  
+    }
+}
+
+.btncomponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    background: #00ffff00;
+    border: none;
+
+    &-save{
+    width: 100%;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 1vh;
+    color: white;
+    justify-content: space-around;
+    background-color: #26c7dc;
+    height: 6vh;
+    font-family: "Monserrat-Estandart";
+    font-size: 15px;
+    }
+
+    &-informe{
+        width: 100%;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 1vh;
+    color: #26c7dc;
+    justify-content: space-around;
+    background-color: #26c7dc00;
+    height: 6vh;
+    font-family: "Monserrat-Estandart";
+    font-size: 15px;
+    }
+}
+
+.btndiv{
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.dates{
+    margin-bottom: 1vh;
+}
+
+.btnFuntion{
+    background: #00ffff00;
+    border: none;
+}
+
+.app-prueba{
+    max-height: 350px;
+    max-width: 450px;
+    margin: auto;
+}

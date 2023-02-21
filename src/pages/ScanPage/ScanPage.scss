@@ -1,0 +1,88 @@
+.close{
+    display: flex;
+    justify-content: flex-end;
+    margin: 4vh ;
+    width: 100%;
+    margin-right: 15vh;
+}
+
+.info-p{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.titleNormal{
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 19px;
+}
+
+.titleBold{
+    font-family: "Monserrat-Bold";
+    font-size: 23px;
+    margin-bottom: 10vh;
+}
+
+.linksScan{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonScan{
+    border-radius: 50%;
+    border: none;
+    background-color: #26c7dc;
+    margin-right: 5vh;
+    
+}
+
+.buttonQr{
+    border-radius: 50%;
+    border: none;
+    background-color: #d8d8d8;
+    margin-right: 5vh;
+}
+
+.buttonNfc{
+    border-radius: 50%;
+    border: none;
+    background-color: #d8d8d8;
+}
+
+.imgScan{
+    width: 8vh;
+    padding: 1vh;
+
+}
+
+.imgQr{
+    background-color: #d8d8d8;
+    border-radius: 50%;
+    border: none;
+}
+
+.scancodepage{
+    background-color: antiquewhite;
+    height: 45vh;
+    margin: 3vh;
+}
+
+.scan_input{
+    text-align: center;
+}
+
+video{
+    width: 40vh;
+    margin: 3vh;
+}
+.app-div{
+    max-height: 350px;
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

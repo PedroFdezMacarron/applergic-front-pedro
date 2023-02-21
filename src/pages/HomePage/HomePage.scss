@@ -1,0 +1,113 @@
+.home{
+
+
+    max-height: 350px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+    &-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3vh;
+        align-items: center;
+
+        &_hamburguesa{
+            height: 4vh;
+        }
+
+        &_buttonInfo{
+            height: 4vh;
+        }
+
+        &_logohome{
+            height: 23vh;
+            margin: 5vh 0vh 7vh 0vh;
+        }
+    }
+
+    &-logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    &-buttons{
+        display: flex;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_scan{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            // align-items: center;
+            width: 90%;
+            margin-bottom: 35px;
+            // text-align: center;
+
+            img{
+                width: 6vh;
+                display: flex;
+            }
+
+            p{
+                text-align: center;
+            }
+
+            
+        }
+    }
+}
+
+.ocult{
+    color: rgba(255, 228, 196, 0);
+}
+
+.button-class1{
+    width: 100%;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 1vh;
+    color: white;
+    justify-content: space-around;
+    background-color: #26c7dc;
+    height: 6vh;
+}
+
+.button-class2{
+    width: 100%;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 1vh;
+    color: white;
+    justify-content: space-around;
+    background-color: #c4c4c4;
+    height: 6vh;
+}
+
+.button-class3{
+    width: 100%;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 1vh;
+    color: white;
+    justify-content: space-around;
+    background-color: #f47c97;
+    height: 6vh;
+}
+
+p{
+    font-size: 15px;
+}
+
+

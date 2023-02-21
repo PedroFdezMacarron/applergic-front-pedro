@@ -1,0 +1,21 @@
+
+
+.staticMenu{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2vh;
+    max-height: 350px;
+    max-width: 500px;
+    
+
+    &-img{
+        width: 6vh;
+    }
+}
+
+.thestaticMenu{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 5000;
+}

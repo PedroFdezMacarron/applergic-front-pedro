@@ -1,0 +1,20 @@
+.btn{
+    max-width: 600px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;      
+    &--blue{
+        color: white;
+        background-color: #27c7dc;
+    }
+    &--grey{
+        color: white;
+        background-color: #cccccc;
+    }
+
+}
+.btn:hover{  
+    background-color: #27c7dc;
+}

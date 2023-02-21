@@ -1,0 +1,99 @@
+.login{
+    min-height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    font-family: Monserrat-Estandart;
+    // Monserrat-Fina
+    align-items: center;
+    
+    &__header{
+        max-width: 600px;
+    }
+
+    &__img{
+        width: 100%;         
+        object-fit: cover;    
+        max-height: 350px;
+        max-width: 500px;    
+    }
+
+    &__imglogo{
+        position: relative;
+        bottom: 50px;
+        left: 30px;
+        width: 87px;
+    }
+    &__body{
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        align-items:flex-start;
+        padding: 20px;
+    }
+    &__title{
+        font-size: 20px;        
+        font-family: Monserrat-Bold;
+    }
+    &__subtitle{
+        font-size: 19px;     
+        font-weight: 600;           
+    }
+    &__form{        
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 100%;
+        max-width: 600px;
+    }
+    &__btn{
+        max-width: 602px;
+        font-weight: 700;
+        color: white;
+        background-color: #27c7dc;
+        border: none;
+        border-radius: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;        
+    }
+ 
+
+    &__txt{         
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid grey;
+        font-size: 15px;
+        font-weight: 700;
+        height: 40px;
+    }
+    &__txt::placeholder{       
+        color:#d4d2d2;          
+    }
+
+    &__new{
+        margin-top: 10px;
+        font-family: Monserrat-Fina;
+        font-size: 15px;
+        color:#d4d2d2;
+        font-weight: 600;
+    }
+    &__new-link{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #27c7dc;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__blue{        
+        color: #27c7dc;
+        font-family: Monserrat-Fina;
+        font-weight: 600;
+        font-size: 12px;
+    }
+}
+input {
+    display: block;
+    width: 100%;
+  }

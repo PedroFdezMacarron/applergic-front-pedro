@@ -1,0 +1,23 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Monserrat-Fina";
+}
+
+@font-face {
+  font-family: "Monserrat-Bold";
+  src: url("./assets/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Monserrat-Estandart";
+  src: url("./assets/Montserrat/static/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Monserrat-Fina";
+  src: url("./assets/Montserrat/static/Montserrat-Light.ttf");
+}
+

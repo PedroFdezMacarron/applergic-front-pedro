@@ -1,0 +1,113 @@
+.register{
+    min-height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 121px;
+    }    
+
+    &__img1{
+        width: 111px;
+        height: 111px;               
+        object-fit: cover;    
+    }
+
+    &__img2{
+        width: 80px;
+        height: 80px;
+        object-fit: cover;   
+        position: relative;
+        bottom: 105px;
+        left: 0px;       
+    }
+    &__img3{
+        color:#27c7dc;        
+        position: relative;
+        bottom: 120px;
+        font-size: 15px;            
+    }
+
+    &__body{
+        width: 90%;        
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        align-items: center;
+    }
+    &__title{
+        font-family: Monserrat-Bold;
+        font-size: 20px;                
+
+        margin-top: 30px;    
+        margin-bottom: 50px;
+    }
+    &__subtitle{
+        font-size: 19px;     
+        font-weight: 600;           
+    }
+    &__form{        
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 100%;
+        margin-bottom: 30px;
+        margin-top: 60px;
+        max-width: 600px;
+    }
+    &__btn{
+        width:auto;
+        font-size: 22px;
+        color: white;
+        background-color: #cccccc;
+        border: none;
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        // 70faff
+        // 00cadf        
+    }
+    &__btn:hover{
+        background-color: #27c7dc;
+    }
+    &__volver{
+        position: relative;
+        left: -158px;      
+        top:30px;
+        color: #27c7dc;
+    }
+    &__blue{
+        color: #27c7dc;
+    }
+
+    &__txt{         
+        color:#595f65;    
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid rgb(116, 116, 116);
+        font-size: 15px;
+        height: 40px;
+        font-family: "Monserrat-Estandart"; 
+    }
+    &__txt::placeholder{       
+        color:#d4d2d2;          
+    }
+    &__pwd{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid grey;
+        font-size: 15px;
+        height: 40px;
+    }
+    &__new-link{
+        color: #27c7dc;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
