@@ -1,72 +1,66 @@
-.editDiary{
-  display: flex;
-  justify-content: flex-end;
-  margin: 4vh 3vh 2vh 0vh;
-  align-items: center;
+.gallery{
 
-  a{
-      margin: 2vh;
-  }
-
-  &-png{
-      background: #faebd700;
-      border: none;
-      width: 4vh;
-  }
-
-}
-
-.tittle{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  &-Bold{
-    font-family: "Monserrat-Bold";
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 2vh;
-  }
-}
-
-.products{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #83d8ad;
-  padding: 2vh;
-  justify-content: space-evenly;
-
-  &__div{
+  &__cross{
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
+    margin: 20px;
+    align-items: center;
+  }  
+  &__tittle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &--bold{
+      font-family: "Monserrat-Bold";
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  }
+  &__products{
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    justify-content: space-evenly;
     align-items: center;
 
-    &-container{
-      width: 180px;
-      height: 180px;
+    &__div{
+      width: 360px;
+      height: 300px;
       display: flex;
-      justify-content: center;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      border: 10px solid rgb(131, 216, 173);
+      border: 5px solid grey;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      
+      &--img{
 
-      &_dates{
-        padding: 3vh;
+        &-1{
+          width: 150px;
+          height: 150px;
+          object-fit: scale-down;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
       }
+      &--card{
+        padding-right: 10px ;
 
-      &_cross{
+        &--h3{
+          font-family: "Monserrat-Bold";
+          padding-bottom: 10px;
+          font-size: 20px;
+        }
+        p{
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
+          span{
+          font-weight: bold;
+          padding-right: 5px;
+          }
+        }
       }
-    }
-
-    &-img{
-      position: relative;
-      width: 150px;
-      height: 150px;
-      object-fit: scale-down; 
     }
   }
 }

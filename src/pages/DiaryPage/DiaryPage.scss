@@ -42,8 +42,9 @@
     }
 }
 
-.products{
+.theproducts{
     display: flex;
+    // flex-direction: row;
     border: 1px solid #83d8ad;
     padding: 2vh;
     justify-content: space-evenly;

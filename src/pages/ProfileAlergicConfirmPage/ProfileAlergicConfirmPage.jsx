@@ -17,9 +17,9 @@ const ProfileAlergicConfirmPage = () => {
 
   const navigate = useNavigate();
 
-  const guardar = () => {
+  const guardar = async () => {
     console.log('guardar usuario');
-    API.post('users/register', newUser).then(res => {
+    await API.post('users/register', newUser).then(res => {
     console.log('Register user',);
     console.log("submit");
     })
@@ -28,7 +28,7 @@ const ProfileAlergicConfirmPage = () => {
         email: newUser.email,
         password: newUser.password
       }
-    API.post('users/login', formData).then(res => {
+    await API.post('users/login', formData).then(res => {
         console.log(newUser);
         console.log(formData);
         localStorage.setItem('token', res.data.token)

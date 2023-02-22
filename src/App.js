@@ -16,6 +16,7 @@ import ScanResultPage from './pages/ScanResultPage/ScanResultPage';
 import HomePage from './pages/HomePage/HomePage';
 import DiaryPage from './pages/DiaryPage/DiaryPage';
 import GalleryPage from "./pages/GalleryPage/GalleryPage";
+import CreditsPage from "./pages/CreditsPage/CreditsPage";
 import { JwtContext} from './shared/contexts/JwtContext';
 
 import React, { useState } from 'react';
@@ -47,6 +48,7 @@ function App() {
               <Route path="/home" element={<HomePage></HomePage>}/>
               <Route path="/diary" element={<DiaryPage></DiaryPage>}/>
               <Route path="/gallery" element={<GalleryPage></GalleryPage>}/>
+              <Route path="/credits" element={<CreditsPage></CreditsPage>}/>
 
           </Routes>
         </div>

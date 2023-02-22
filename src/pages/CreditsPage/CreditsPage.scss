@@ -1,0 +1,30 @@
+.credits{
+
+    max-height: 350px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    &-logo{
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+
+.title{
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+.developers{
+    font-size: 20px;
+    text-align: center;
+    
+}

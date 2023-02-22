@@ -45,7 +45,7 @@ export default function DiaryPage() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
     const formattedDate = date.toLocaleDateString('es-ES', options);
 
-    return formattedDate
+    return formattedDate;
   } 
 
   // Eliminar el producto del array
@@ -80,18 +80,18 @@ export default function DiaryPage() {
 
 
        {products.map((item,index) => (
-        <div className='products' key={index}>
-            <div className='products-container'>
-              <img className='products-img' src={item.img} alt="" />
-              <img className='products-tick' src ={tick} alt="filter"/>
+        <div className='theproducts' key={index}>
+            <div className='theproducts-container'>
+              <img className='theproducts-img' src={item.img} alt="" />
+              <img className='theproducts-tick' src ={tick} alt="filter"/>
             </div>
 
-            <div className='products-container_dates'>
+            <div className='theproducts-container_dates'>
               <p className="dates">{formatDate(item.fecha)}</p>
               <figcaption className="dates">{item.name}</figcaption>
               <p className="dates">Notas:{item.notas}</p>
             </div>
-            <div className='products-container_cross'>
+            <div className='theproducts-container_cross'>
               <button className="btnFuntion" onClick={() => deleteProduct(item._id)}><CrossComponet></CrossComponet></button>
               <button className='editDiary-png'><img className="pencil" src={edit} alt="edit" /></button>
             </div>

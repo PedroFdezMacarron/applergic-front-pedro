@@ -37,10 +37,11 @@
     }
     &__nav-container{
         display: flex;
-        justify-content: space-around;
+        // justify-content: space-around;
+        gap: 234px;
         max-width:600px;
         margin-top: 95px;
-        bottom: 4vh;
+        // bottom: 4vh;
         // position: fixed;
         &__nav-button{
             color: rgb(39, 199, 220);
