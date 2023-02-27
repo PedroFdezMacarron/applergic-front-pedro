@@ -3,7 +3,7 @@ import CrossComponet from '../../components/CrossComponet/CrossComponent'
 import cbarras from '../../../src/assets/codigobarras.png'
 import qr from '../../../src/assets/qr.png'
 import nfc from '../../../src/assets/nfc.png'
-
+import ScanCodePage from './ScanCodePage/ScanCodePage'
 import { Link } from 'react-router-dom';
 import "./ScanPage.scss"
 
@@ -21,7 +21,7 @@ export default function ScanPage(){
             
         </div>
       </div>
-
+      <ScanCodePage></ScanCodePage>
       
        
 

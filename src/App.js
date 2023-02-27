@@ -20,6 +20,7 @@ import CreditsPage from "./pages/CreditsPage/CreditsPage";
 import { JwtContext} from './shared/contexts/JwtContext';
 
 import React, { useState } from 'react';
+import ProfileEditPage from './pages/ProfileEditPage/ProfileEditPage';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               <Route path="/login" element={<LoginPage></LoginPage>}/>
               <Route path="/register" element={<RegisterPage></RegisterPage>}/>
               <Route path="/profile" element={<ProfilePage></ProfilePage>}/>
+              <Route path="/users/update2" element={<ProfileEditPage></ProfileEditPage>}/> 
               <Route path="/profile/emergency" element={<ProfileEmergencyPage></ProfileEmergencyPage>}/> 
               <Route path="/profile/alergics" element={<ProfileAlergicPage></ProfileAlergicPage>}/>
               <Route path="/profile/alergics/confirm" element={<ProfileAlergicConfirmPage></ProfileAlergicConfirmPage>}/>

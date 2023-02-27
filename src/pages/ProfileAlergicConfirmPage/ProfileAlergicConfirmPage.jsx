@@ -9,36 +9,45 @@ import { JwtContext } from '../../shared/contexts/JwtContext';
 const ProfileAlergicConfirmPage = () => {
 
   const { newUser, setJwt, setUser } = useContext(JwtContext);
+  const navigate = useNavigate();
 
   let alergiasUser = newUser.intolerances;
   
-  console.log(newUser);
-  console.log(alergiasUser);
-
-  const navigate = useNavigate();
+  console.log('log inicial de profilealergicuser', newUser);
+  console.log('linea 16 alergias user',alergiasUser);
 
   const guardar = async () => {
     console.log('guardar usuario');
     await API.post('users/register', newUser).then(res => {
     console.log('Register user',);
     console.log("submit");
-    })
-      const formData = {
 
-        email: newUser.email,
-        password: newUser.password
-      }
-    await API.post('users/login', formData).then(res => {
-        console.log(newUser);
-        console.log(formData);
-        localStorage.setItem('token', res.data.token)
-        localStorage.setItem('user', JSON.stringify(res.data.user))
-        setJwt(true);
-        setUser(JSON.stringify(res.data.user));
-        navigate('/profile/end')
+    login();
+    // navigate('/profile/end');
     })
   }
-  
+
+  const login = async () => {
+    const formData = {
+      email: newUser.email,
+      password: newUser.password
+    }
+    console.log(newUser.email);
+    console.log(newUser.password);
+
+
+    await API.post('users/login', formData).then(res => {
+        console.log("submit",formData);
+        API.post('users/login', formData).then(res => {
+            localStorage.setItem('token', res.data.token)
+            localStorage.setItem('user', JSON.stringify(res.data.user))
+            setJwt(true);
+            setUser(JSON.stringify(res.data.user));
+            navigate('/profile/end');
+        })
+      navigate('/profile/end');
+    })
+  }
 
   return (
     <div className='alergicConfirm'>
@@ -68,6 +77,8 @@ const ProfileAlergicConfirmPage = () => {
       </div>
 
       <button onClick={guardar} className='alergicConfirm__btn'>CONFIRMAR</button>
+      {/* <button onClick={login} className='alergicConfirm__btn'>LOGIN</button> */}
+
     </div>
   )
 }

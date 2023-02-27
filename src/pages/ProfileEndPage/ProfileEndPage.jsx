@@ -17,14 +17,13 @@ const ProfileEndPage = () => {
   return (
     <div className='profileEnd'>
       <div className='profileEnd__header'>
-        <VolverComponent ruta={'/profile/alergics/confirm'}></VolverComponent>
         <CrossComponet ruta={'/home'}></CrossComponet>
       </div>
       <div className='profileEnd__card'>
         <img src={perfect} alt='alergics-finish'></img>
         <h3>Hemos terminado, ya puedes escanear tu primer producto.</h3>
       </div>
-      <button ><Link to='/scan'>Escanea un producto</Link></button>
+      <button><Link to='/scan'>Escanea un producto</Link></button>
     </div>
   )
 }

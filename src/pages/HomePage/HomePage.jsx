@@ -47,7 +47,7 @@ const HomePage = () => {
                 <div><p>S.O.S</p></div>
                 <div><p className='ocult'>S.O.S</p></div>
               </button></Link>
-              <p>Â¿Necesitas ayuda urgente? Contactamos con emergencias.</p>
+              <p>¿Necesitas ayuda urgente? Contactamos con emergencias.</p>
             </div>
         </div>
         

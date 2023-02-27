@@ -91,8 +91,8 @@ const ProfileAlergicPage = () => {
                 <div className='alergicPage__words__box--c'>
                   {components.map((component) => (
                   component.name[0] === letra && <button className={miClase} key={component._id} onClick={(event) =>{
-                    addIntolerance(component)
-                    changeColor(event)
+                    addIntolerance(component);
+                    changeColor(event);
                   }
                   } id={component.id}>{component.name}</button>
                   ))}

@@ -3,8 +3,10 @@
 import userPhoto from "../../assets/Imagen_no_disponible.png";
 import "./ProfilePage.scss";
 import VolverComponent from '../../components/VolverComponent/VolverComponent';
+import { useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {  
+  const navigate = useNavigate();
   
   let defName = "";
   let defEmail = "";
@@ -31,6 +33,10 @@ const ProfilePage = () => {
   }
   
 let photo='ok';
+
+const editar =()=>{
+  navigate('/users/update2');  
+}
 
   return (
 
@@ -62,10 +68,12 @@ let photo='ok';
         <div className='profile__txt' id="name"><span>Compañía/Nº Póliza: </span>{defInsuranceCompany}</div>   
         
        
-    </div>      
+    </div>     
+ 
 
 
   </div>
+  <button onClick={editar}>EDITAR</button>
 
 
 
