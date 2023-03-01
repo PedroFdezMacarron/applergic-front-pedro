@@ -35,7 +35,7 @@ const OnboardingPage = () => {
 
   setTimeout(() => {
     setIntro(false);
-  }, 2000);
+  }, 20000);
 
   const carouselTemplate = (pagina) => {
     return (
@@ -55,6 +55,7 @@ const OnboardingPage = () => {
     //acceder al boton del carousel
     const nextButton = document.querySelector(".p-carousel-next");
     nextButton.click();
+    
     //console.log(nextButton);
   }
   return (
