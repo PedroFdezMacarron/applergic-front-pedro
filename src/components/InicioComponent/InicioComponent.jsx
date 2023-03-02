@@ -10,13 +10,12 @@ const InicioComponent = () => {
   return (
     
     <div className='container-flash'>
-      <div className="inicioImagen">
-        <img className="inicioImagen__imagen" src={ApplergicPpal} alt="ApplergicPpal"/>
-      </div>
+  
+        <img className="inicioImagen__imagen" src={ApplergicPpal} alt="ApplergicPpal"/> 
 
-      <div className="applergicPpal">
+     
         <img className="applergicPpal__image" src={InicioImagen} alt="InicioImagen"/>
-      </div>
+   
       </div>
   
   )
