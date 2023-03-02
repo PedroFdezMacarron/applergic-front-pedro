@@ -16,7 +16,7 @@ const HomePage = () => {
       <div className='home'>
         <div className='home-menu'>  
         <PopupDemo></PopupDemo> 
-            <Link to = {'/profile'}><img className="home-menu_buttonInfo" src={buttonInfo} alt="buttonInfo"/></Link>   
+            <Link to = {'/credits'}><img className="home-menu_buttonInfo" src={buttonInfo} alt="buttonInfo"/></Link>   
         </div>
         <div className='home-logo'>
             <img className="home-menu_logohome" src={logohome} alt="logohome" />   
@@ -42,7 +42,7 @@ const HomePage = () => {
             </div>
             <div className='home-buttons_scan'>
             
-            <Link to = {'/home'}><button className="button-class3">
+            <Link to = {'/sos'}><button className="button-class3">
                 <div><img src ={sos} alt="buttonSearch"/></div>
                 <div><p>S.O.S</p></div>
                 <div><p className='ocult'>S.O.S</p></div>

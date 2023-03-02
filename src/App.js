@@ -21,6 +21,7 @@ import { JwtContext} from './shared/contexts/JwtContext';
 
 import React, { useState } from 'react';
 import ProfileEditPage from './pages/ProfileEditPage/ProfileEditPage';
+import SosPage from './pages/SosPage/SosPage';
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
               <Route path="/diary" element={<DiaryPage></DiaryPage>}/>
               <Route path="/gallery" element={<GalleryPage></GalleryPage>}/>
               <Route path="/credits" element={<CreditsPage></CreditsPage>}/>
-
+              <Route path="/sos" element={<SosPage></SosPage>}/>
           </Routes>
         </div>
       </Router>

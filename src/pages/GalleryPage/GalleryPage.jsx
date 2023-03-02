@@ -1,6 +1,8 @@
 import "./GalleryPage.scss";
 import { useEffect, useState} from "react";
+import { Link } from "react-router-dom"
 import { API } from "../../shared/services/api";
+import home from "../../assets/HomeAssets/logohomemenu.png"
 import CrossComponet from '../../components/CrossComponet/CrossComponent';
 
 export default function GalleryPage() {
@@ -20,7 +22,8 @@ export default function GalleryPage() {
   return(
     <div className="gallery">
       <div className='gallery__cross'>  
-          <CrossComponet ruta={'/home'}></CrossComponet>
+          {/* <CrossComponet ruta={'/home'}></CrossComponet> */}
+          <Link to="/home"><img className='staticMenu-img' src ={home} alt="home"/></Link>
       </div>
 
       <div className='gallery__tittle'>
