@@ -16,10 +16,20 @@ export default function DiaryPage() {
 
   const {newUser, setUser} = useContext(JwtContext);
 
+  
   useEffect(() => {
     const getProducts = () => {
-      API.post('products/user', JSON.parse(newUser)).then(res => {
-        let myUser = JSON.parse(newUser);
+      
+      // cogemos los datos del usuario del localstorage y los asignamos al usuario del contexto
+      const myObjectString = localStorage.getItem('user');    
+      if(myObjectString){
+        // console.log(JSON.parse(myObjectString));
+        setUser(myObjectString);            
+      }
+
+
+      API.post('products/user', JSON.parse(myObjectString)).then(res => {
+        let myUser = JSON.parse(myObjectString);
         let arrayNuevo = res.data;
         const updatedArray = arrayNuevo.map((item) => {
           const product = myUser.diaryProducts.find((p) => p._id === item._id);
@@ -36,7 +46,7 @@ export default function DiaryPage() {
         })
     }
     getProducts();
-  }, [newUser]);
+  }, []);
 
 
   // Formatear la fecha

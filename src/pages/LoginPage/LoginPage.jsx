@@ -13,8 +13,9 @@ export default function LoginPage () {
     const { setJwt,setUser } = useContext(JwtContext);
     const navigate = useNavigate();
 
-    const onSubmit = formData => {
+    const onSubmit = (formData) => {
         console.log("submit",formData);
+
         API.post('users/login', formData).then(res => {
             localStorage.setItem('token', res.data.token)
             localStorage.setItem('user', JSON.stringify(res.data.user))
@@ -41,13 +42,13 @@ export default function LoginPage () {
           <form className='login__form' onSubmit={handleSubmit(onSubmit)}>                        
               <input className='login__txt' id="email" 
                       placeholder='Dirección e.mail' 
-                      // defaultValue="pedro@pedro.com"
+                      defaultValue="pedro@pedro.com"
                       {...register("email",{required: true})}/>
           
               <input className='login__txt' id="password"  
                     placeholder='Password' 
                     type="password" 
-                    // defaultValue={'Pedro*1'}
+                    defaultValue={'Pedro*1'}
                     {...register("password",{required: true})}/>
               <div className='login__blue'>
                 ¿Olvidaste la contaseña

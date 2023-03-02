@@ -35,10 +35,10 @@ const HomePage = () => {
             
              <Link to = {'/gallery'}><button className="button-class2">
                 <div><img src ={searchimg} alt="buttonSearch"/></div>
-                <div><p>Buscar</p></div>
+                <div><p>Productos</p></div>
                 <div><p className='ocult'>Buscar</p></div>
               </button></Link>
-              <p>Busca un comercio o restaurante para ti.</p>
+              <p>Galeria de productos registrados.</p>
             </div>
             <div className='home-buttons_scan'>
             

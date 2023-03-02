@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { JwtContext } from '../../shared/contexts/JwtContext';
 import VolverComponent from '../../components/VolverComponent/VolverComponent';
 import { BtnGrey } from '../../components/BtnComponent/BtnComponent';
-import { API } from "../../shared/services/api";
+// import { API } from "../../shared/services/api";
 
 export default function ProfileEmergencyPage () {
     const { register, handleSubmit } = useForm();    
@@ -22,14 +22,14 @@ export default function ProfileEmergencyPage () {
     let defInsuranceCompany = newUser.insuranceCompany;
 
     // recogemos valor de la variable de localstorage
-    const myObjectString = localStorage.getItem('user');
-    if(myObjectString){
-         let userLoged = JSON.parse(myObjectString)
-         defContactName = userLoged.contactName;
-         defContactEmail = userLoged.contactEmail;
-         defContactPhone = userLoged.contactPhone;
-         defInsuranceCompany = userLoged.insuranceCompany;
-    }
+    // const myObjectString = localStorage.getItem('user');
+    // if(myObjectString){
+    //      let userLoged = JSON.parse(myObjectString)
+    //      defContactName = userLoged.contactName;
+    //      defContactEmail = userLoged.contactEmail;
+    //      defContactPhone = userLoged.contactPhone;
+    //      defInsuranceCompany = userLoged.insuranceCompany;
+    // }
 
 
     const onSubmit = formData => {        

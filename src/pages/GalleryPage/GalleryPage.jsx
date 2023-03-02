@@ -5,11 +5,13 @@ import CrossComponet from '../../components/CrossComponet/CrossComponent';
 
 export default function GalleryPage() {
   const [products, setProducts] = useState([]);
+  const [subtitle, setSubtite] = useState("Cargando productos de la web...");
 
   useEffect(() => {
     const getProducts = () => {
       API.get('products/populate').then(res => {
         setProducts(res.data);
+        setSubtite(res.data.length+" productos recuperados.")
         })
     }
     getProducts();
@@ -23,6 +25,7 @@ export default function GalleryPage() {
 
       <div className='gallery__tittle'>
           <p className='gallery__tittle--bold'>Galería de productos</p>
+          <p className='gallery__subtittle'>{subtitle}</p>
       </div>
 
       <div className='gallery__products'>
